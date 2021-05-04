@@ -14,7 +14,7 @@
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: rgb(120,120,120);" BorderPane.alignment="CENTER">
          <children>
-            <ListView fx:id="ListView" prefHeight="810.0" prefWidth="669.0" style="-fx-background-color: rgb(140,140,140);" />
+            <ListView fx:id="ListView" onMouseClicked="#autoClicked" prefHeight="810.0" prefWidth="669.0" style="-fx-background-color: rgb(140,140,140);" />
          </children>
       </VBox>
    </center>
@@ -26,7 +26,7 @@
          <children>
             <Button fx:id="createBooking" layoutX="89.0" layoutY="13.0" mnemonicParsing="false" style="-fx-background-color: rgb(140,140,140);" text="Create Booking" />
             <TextField fx:id="bookingWeek" layoutX="225.0" layoutY="13.0" promptText="WeekStart" style="-fx-background-color: rgb(140,140,140);" />
-            <Label fx:id="pickedAuto" layoutX="401.0" layoutY="19.0" onMouseClicked="#autoClicked">
+            <Label fx:id="pickedAuto" layoutX="401.0" layoutY="19.0">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>

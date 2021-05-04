@@ -1,3 +1,5 @@
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -47,9 +49,10 @@ public class Controller {
         });
     }
 
-
     public void autoClicked(){
-        pickedAuto.setText(ListView.getSelectionModel().getSelectedItem().getChildren().get(0).toString());
+        //need to get text from label from a vbox witch is inside a listview
+        String labelText = ListView.getSelectionModel().getSelectedItem().getChildren().get(0).toString();
+        pickedAuto.setText(labelText);
     }
 
 }

@@ -13,7 +13,6 @@ public class MainApp extends Application {
 
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
-        System.out.println(2);
         /*
         VBox pane = new VBox();
         Scene scene = new Scene(pane,500,500);
