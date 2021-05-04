@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Payment">
+    <children>
+        <BorderPane prefHeight="400.0" prefWidth="600.0">
+            <top>
+                <Pane prefHeight="56.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="253.0" layoutY="11.0" prefHeight="35.0" prefWidth="94.0" text="Payment">
+                            <font>
+                                <Font size="24.0" />
+                            </font></Label>
+                    </children>
+                </Pane>
+            </top>
+            <bottom>
+                <Pane prefHeight="67.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="bCreditCard" layoutX="475.0" layoutY="-1.0" mnemonicParsing="false" onAction="#handlePayCredit" prefHeight="68.0" prefWidth="125.0" text="Pay with creditcard" />
+                        <Button fx:id="bPayPal" layoutX="350.0" mnemonicParsing="false" onAction="#handlePayPaypal" prefHeight="67.0" prefWidth="125.0" text="Pay with paypal" />
+                    </children>
+                </Pane>
+            </bottom>
+            <left>
+                <Pane prefHeight="277.0" prefWidth="139.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="17.0" layoutY="14.0" prefHeight="17.0" prefWidth="108.0" text="Autocamper type" />
+                        <ImageView fitHeight="100.0" fitWidth="140.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label layoutY="35.0" prefHeight="21.0" prefWidth="143.0" text="Label" />
+                    </children>
+                </Pane>
+            </left>
+            <right>
+                <Pane prefHeight="277.0" prefWidth="145.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label alignment="CENTER" layoutY="14.0" prefHeight="17.0" prefWidth="147.0" text="Autocamper Price" textAlignment="CENTER" />
+                        <Label alignment="CENTER" layoutY="40.0" prefHeight="17.0" prefWidth="147.0" text="Label" />
+                    </children></Pane>
+            </right>
+            <center>
+                <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="40.0" text="Name: " />
+                        <Label layoutX="14.0" layoutY="37.0" prefHeight="17.0" prefWidth="59.0" text="Address:" />
+                        <Label layoutX="14.0" layoutY="63.0" text="Email:" />
+                        <Label layoutX="13.0" layoutY="114.0" text="Booking weeks:" />
+                        <Label layoutX="104.0" layoutY="114.0" text="Label" />
+                        <TextField fx:id="tName" layoutX="73.0" layoutY="10.0" />
+                        <TextField fx:id="tAddress" layoutX="73.0" layoutY="33.0" />
+                        <TextField fx:id="tEmail" layoutX="73.0" layoutY="59.0" />
+                        <Label layoutX="14.0" layoutY="89.0" text="Phoneno:" />
+                        <TextField fx:id="tPhoneNo" layoutX="73.0" layoutY="85.0" />
+                    </children>
+                </Pane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
+
