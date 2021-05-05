@@ -21,10 +21,6 @@ import java.util.logging.Logger;
 
 public class Payment {
 
-    public String getName() {
-        return name;
-    }
-
     public String name, address, email, phoneno;
 
     @FXML
@@ -42,10 +38,13 @@ public class Payment {
         email = tEmail.getText();
         phoneno = tPhoneNo.getText();
 
+
         try {
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("PaymentConfirm.fxml"));
             Parent root = loader.load();
+            PaymentConfirm test = loader.getController();
+            test.setName(name, address, email, phoneno);
             Scene scene = new Scene(root);
             Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
@@ -60,6 +59,8 @@ public class Payment {
         address = tAddress.getText();
         email = tEmail.getText();
         phoneno = tPhoneNo.getText();
+
+
 
         try {
 
@@ -89,5 +90,8 @@ public class Payment {
         }catch (Exception e)
         {e.printStackTrace();}
     }
+
+
+
     }
 

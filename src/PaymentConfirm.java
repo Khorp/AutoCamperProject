@@ -8,17 +8,29 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
-public class PaymentConfirm extends Payment {
+public class PaymentConfirm {
 
     @FXML
-    Label lName;
+    Label lName, lAdress,lEmail, lPhoneNo;
+
+    public void setName(String name, String address, String email, String PhonoNo) {
+        this.name = name;
+        lName.setText(name);
+        lAdress.setText(address);
+        lEmail.setText(email);
+        lPhoneNo.setText(PhonoNo);
+
+
+    }
+
+    String name;
 
     public void initialize() {
 
 
 
-        lName.setText(getName());
-        System.out.println("test" + getName());
+
+        System.out.println("test" + name);
 
 
 
