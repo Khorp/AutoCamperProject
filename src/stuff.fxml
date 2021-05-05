@@ -24,7 +24,7 @@
    <bottom>
       <Pane prefHeight="77.0" prefWidth="600.0" style="-fx-background-color: rgb(100,100,100);" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="createBooking" layoutX="89.0" layoutY="13.0" mnemonicParsing="false" style="-fx-background-color: rgb(140,140,140);" text="Create Booking" />
+            <Button fx:id="createBooking" layoutX="89.0" layoutY="13.0" mnemonicParsing="false" onAction="#createBooking" style="-fx-background-color: rgb(140,140,140);" text="Create Booking" />
             <TextField fx:id="bookingWeek" layoutX="225.0" layoutY="13.0" promptText="WeekStart" style="-fx-background-color: rgb(140,140,140);" />
             <Label fx:id="pickedAuto" layoutX="401.0" layoutY="19.0">
                <font>
