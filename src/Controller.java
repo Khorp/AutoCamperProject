@@ -48,13 +48,13 @@ public class Controller {
         camperList = FXCollections.observableArrayList();
         list = new ArrayList<>();
 
-        list.add(new AutoCamperA(100,"Adria autocamper", AutoCamper.type.basic));
-        list.add(new AutoCamperA(200,"Arto Niesmann+Bischoff autocamper", AutoCamper.type.standard));
-        list.add(new AutoCamperA(213,"Autocamper", AutoCamper.type.luxury));
-        list.add(new AutoCamperA(423,"Britz autocamper", AutoCamper.type.standard));
-        list.add(new AutoCamperA(423,"Concorde autocamper", AutoCamper.type.luxury));
-        list.add(new AutoCamperA(100,"GRAN CANARIA autocamper", AutoCamper.type.standard));
-        list.add(new AutoCamperA(10,"volkswagen samba autocamper", AutoCamper.type.basic));
+        list.add(new AutoCamperA(500,"Adria autocamper", AutoCamper.type.basic));
+        list.add(new AutoCamperA(750,"Arto Niesmann+Bischoff autocamper", AutoCamper.type.standard));
+        list.add(new AutoCamperA(1000,"Autocamper", AutoCamper.type.luxury));
+        list.add(new AutoCamperA(800,"Britz autocamper", AutoCamper.type.standard));
+        list.add(new AutoCamperA(1500,"Concorde autocamper", AutoCamper.type.luxury));
+        list.add(new AutoCamperA(400,"GRAN CANARIA autocamper", AutoCamper.type.standard));
+        list.add(new AutoCamperA(150,"volkswagen samba autocamper", AutoCamper.type.basic));
         for (AutoCamperA autoCamperA : list) {
             camperList.add(autoCamperA.getAutoCamperVbox());
         }
@@ -76,7 +76,7 @@ public class Controller {
         //loop to find get number
         for (int i=0;i<camperList.size();i++){
             if (list.get(i).getAutoCamperName().equals(temp1.getText())){
-                priceLabel.setText("Price: "+list.get(i).getPrice());
+                priceLabel.setText("Price per week: "+list.get(i).getPrice() + " euro");
                 TypeLabel.setText("Type: "+list.get(i).getType());
             }
         }
@@ -116,7 +116,7 @@ public class Controller {
                 }
             }
             else {
-                pickedAuto.setText("you haven't picked a autoCamper");
+                pickedAuto.setText("Remember to chose a Autocamper");
             }
         }
         else {

@@ -20,9 +20,9 @@
     <children>
         <BorderPane prefHeight="800.0" prefWidth="800.0">
             <top>
-                <Pane prefHeight="56.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                <Pane prefHeight="56.0" prefWidth="600.0" style="-fx-background-color: grey;" BorderPane.alignment="CENTER">
                     <children>
-                        <Label layoutX="253.0" layoutY="11.0" prefHeight="35.0" prefWidth="94.0" text="Payment">
+                        <Label layoutX="359.0" layoutY="11.0" prefHeight="35.0" prefWidth="94.0" text="Payment">
                             <font>
                                 <Font size="24.0" />
                             </font></Label>
@@ -31,39 +31,21 @@
                 </Pane>
             </top>
             <bottom>
-                <Pane prefHeight="67.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+                <Pane prefHeight="67.0" prefWidth="600.0" style="-fx-background-color: grey;" BorderPane.alignment="CENTER" />
             </bottom>
-            <left>
-                <Pane prefHeight="277.0" prefWidth="139.0" BorderPane.alignment="CENTER">
-                    <children>
-                        <ImageView fitHeight="100.0" fitWidth="140.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" />
-                        <Label layoutY="35.0" prefHeight="21.0" prefWidth="143.0" />
-                        <Label layoutX="62.0" layoutY="256.0" prefHeight="21.0" prefWidth="127.0" text="Autocamper type:" />
-                        <Label layoutX="80.0" layoutY="228.0" text="Booking weeks:" />
-                  <Label layoutX="88.0" layoutY="198.0" text="Insurance:" />
-                        <Label alignment="CENTER" layoutX="43.0" layoutY="286.0" prefHeight="17.0" prefWidth="147.0" text="Autocamper Price" textAlignment="CENTER" />
-                    </children>
-                </Pane>
-            </left>
-            <right>
-                <Pane prefHeight="277.0" prefWidth="145.0" BorderPane.alignment="CENTER">
-                    <children>
-                        <Label alignment="CENTER" layoutY="40.0" prefHeight="17.0" prefWidth="147.0" />
-                    </children></Pane>
-            </right>
             <center>
-                <Pane prefHeight="342.0" prefWidth="380.0" BorderPane.alignment="CENTER">
+                <Pane prefHeight="342.0" prefWidth="380.0" style="-fx-background-color: lightgrey;" BorderPane.alignment="CENTER">
                     <children>
-                        <Label layoutX="-31.0" layoutY="34.0" prefHeight="21.0" prefWidth="62.0" text="Name: " />
-                        <Label layoutX="-29.0" layoutY="74.0" prefHeight="17.0" prefWidth="59.0" text="Address:" />
-                        <Label layoutX="-31.0" layoutY="115.0" text="Email:" />
-                        <Label layoutX="94.0" layoutY="199.0" />
-                        <TextField fx:id="tName" layoutX="46.0" layoutY="29.0" />
-                        <TextField fx:id="tAddress" layoutX="46.0" layoutY="69.0" />
-                        <TextField fx:id="tEmail" layoutX="46.0" layoutY="110.0" />
-                        <Label layoutX="-31.0" layoutY="152.0" text="Phoneno:" />
-                        <TextField fx:id="tPhoneNo" layoutX="46.0" layoutY="147.0" />
-                  <ChoiceBox layoutX="46.0" layoutY="194.0" prefHeight="31.0" prefWidth="192.0">
+                        <Label layoutX="86.0" layoutY="91.0" prefHeight="21.0" prefWidth="62.0" text="Name: " />
+                        <Label layoutX="87.0" layoutY="131.0" prefHeight="17.0" prefWidth="59.0" text="Address:" />
+                        <Label layoutX="87.0" layoutY="172.0" text="Email:" />
+                        <Label layoutX="241.0" layoutY="256.0" />
+                        <TextField fx:id="tName" layoutX="193.0" layoutY="86.0" />
+                        <TextField fx:id="tAddress" layoutX="193.0" layoutY="126.0" />
+                        <TextField fx:id="tEmail" layoutX="193.0" layoutY="167.0" />
+                        <Label layoutX="84.0" layoutY="209.0" text="Phone number:" />
+                        <TextField fx:id="tPhoneNo" layoutX="193.0" layoutY="204.0" />
+                  <ChoiceBox layoutX="193.0" layoutY="251.0" prefHeight="31.0" prefWidth="192.0">
                         <items>
                             <FXCollections fx:factory="observableArrayList">
                                 <String fx:value="2 minutes" />
@@ -72,11 +54,39 @@
                             </FXCollections>
                         </items>
                   </ChoiceBox>
+                        <Button fx:id="bPayPal" layoutX="116.0" layoutY="465.0" mnemonicParsing="false" onAction="#handlePayPaypal" prefHeight="67.0" prefWidth="125.0" style="-fx-background-color: lightgrey;">
+                     <graphic>
+                        <ImageView fitHeight="69.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="Images/paypal.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="bCreditCard" layoutX="300.0" layoutY="465.0" mnemonicParsing="false" onAction="#handlePayCredit" prefHeight="67.0" prefWidth="125.0" style="-fx-background-color: lightgrey;">
+                     <graphic>
+                        <ImageView fitHeight="69.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="Images/credit.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label alignment="CENTER" layoutX="159.0" layoutY="38.0" prefHeight="34.0" prefWidth="255.0" text="Your information:">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="92.0" layoutY="256.0" text="Insurance:" />
                     </children>
                 </Pane>
             </center>
+         <right>
+            <Pane prefHeight="677.0" prefWidth="135.0" style="-fx-background-color: grey;" BorderPane.alignment="CENTER" />
+         </right>
+         <left>
+            <Pane prefHeight="677.0" prefWidth="135.0" style="-fx-background-color: grey;" BorderPane.alignment="CENTER" />
+         </left>
         </BorderPane>
-            <Button fx:id="bCreditCard" layoutX="420.0" layoutY="521.0" mnemonicParsing="false" onAction="#handlePayCredit" prefHeight="68.0" prefWidth="170.0" text="Pay with Credit Card" />
-            <Button fx:id="bPayPal" layoutX="284.0" layoutY="521.0" mnemonicParsing="false" onAction="#handlePayPaypal" prefHeight="67.0" prefWidth="125.0" text="Pay with PayPal" />
     </children>
 </AnchorPane>

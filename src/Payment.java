@@ -32,6 +32,8 @@ public class Payment {
     @FXML
     ChoiceBox cInsurance;
 
+
+
     public void handlePayCredit(ActionEvent event) {
         name = tName.getText();
         System.out.println(name);
