@@ -1,14 +1,15 @@
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 
 public class PaymentConfirm {
 
     @FXML
-    Button lName;
+    Label lName;
 
     public void initialize() {
 
-        lName.setText();
+       // lName.setText();
 
 
 
