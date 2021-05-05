@@ -42,10 +42,10 @@ public class Controller {
 
     public void initialize(){
         camperList = FXCollections.observableArrayList();
-        camperList.add(new AutoCamperA(100,"1").getAutoCamperVbox());
-        camperList.add(new AutoCamperA(200,"2").getAutoCamperVbox());
-        camperList.add(new AutoCamperA(213,"3").getAutoCamperVbox());
-        camperList.add(new AutoCamperA(423,"4").getAutoCamperVbox());
+        camperList.add(new AutoCamperA(100,"1", AutoCamper.type.standard).getAutoCamperVbox());
+        camperList.add(new AutoCamperA(200,"2", AutoCamper.type.basic).getAutoCamperVbox());
+        camperList.add(new AutoCamperA(213,"3", AutoCamper.type.luxury).getAutoCamperVbox());
+        camperList.add(new AutoCamperA(423,"4", AutoCamper.type.standard).getAutoCamperVbox());
         ListView.setItems(camperList);
     }
 

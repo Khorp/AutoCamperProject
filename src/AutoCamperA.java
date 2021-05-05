@@ -11,24 +11,18 @@ import java.io.FilenameFilter;
 
 public class AutoCamperA implements AutoCamper{
 
-    /*
-        Need price
-        Need Name that helps finding picture as well
-        need a picture reference
-        Need Vbox with label and imageview in it
-        Need a enum type thing.
-     */
-
     private double price;
     private String autoCamperName;
     private Image autoCamperPicture;
     private VBox autoCamperVbox;
     private ImageView autoCamperImageView;
     private Label autoCamperLabel;
+    private type type;
 
-    public AutoCamperA(int price,String autoCamperName){
+    public AutoCamperA(int price,String autoCamperName,type type){
         this.price = price;
         this.autoCamperName = autoCamperName;
+        this.type = type;
     }
 
     public double getPrice(){
