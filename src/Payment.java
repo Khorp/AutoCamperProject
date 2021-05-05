@@ -1,3 +1,5 @@
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -5,12 +7,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -29,7 +29,8 @@ public class Payment {
     @FXML
     TextField tName, tAddress, tEmail, tPhoneNo;
 
-
+    @FXML
+    ChoiceBox cInsurance;
 
     public void handlePayCredit(ActionEvent event) {
         name = tName.getText();
@@ -38,14 +39,13 @@ public class Payment {
         email = tEmail.getText();
         phoneno = tPhoneNo.getText();
 
-
         try {
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("PaymentConfirm.fxml"));
             Parent root = loader.load();
             PaymentConfirm test = loader.getController();
             test.setName(name, address, email, phoneno);
-            Scene scene = new Scene(root);
+            Scene scene = new Scene(root, 800,800);
             Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.show();
@@ -66,7 +66,7 @@ public class Payment {
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("PaymentPayPalConfirm.fxml"));
             Parent root = loader.load();
-            Scene scene = new Scene(root);
+            Scene scene = new Scene(root,800,800);
             Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.show();

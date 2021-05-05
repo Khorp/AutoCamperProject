@@ -43,7 +43,7 @@ public class PaymentConfirm {
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("stuff.fxml"));
             Parent root = loader.load();
-            Scene scene = new Scene(root);
+            Scene scene = new Scene(root, 800,800);
             Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.show();
