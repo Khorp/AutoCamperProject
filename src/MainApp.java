@@ -12,7 +12,7 @@ public class MainApp extends Application {
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("stuff.fxml"));
 
-        primaryStage.setScene(new Scene(root));
+        primaryStage.setScene(new Scene(root, 800, 800));
         primaryStage.show();
         /*
         VBox pane = new VBox();
