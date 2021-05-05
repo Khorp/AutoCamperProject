@@ -71,7 +71,8 @@ public class Controller {
                 stage.setScene(scene);
                 stage.show();
 
-            }catch (Exception e){}
+            }catch (Exception e)
+            {e.printStackTrace();}
         }
         else {
             pickedAuto.setText("Invalid week number");
