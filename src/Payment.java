@@ -20,6 +20,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Payment {
+
+    public String getName() {
+        return name;
+    }
+
     public String name, address, email, phoneno;
 
     @FXML
@@ -32,6 +37,7 @@ public class Payment {
 
     public void handlePayCredit(ActionEvent event) {
         name = tName.getText();
+        System.out.println(name);
         address = tAddress.getText();
         email = tEmail.getText();
         phoneno = tPhoneNo.getText();
