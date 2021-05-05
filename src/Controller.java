@@ -1,5 +1,7 @@
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -33,12 +35,17 @@ public class Controller {
 
     @FXML
     ListView<VBox> ListView;
-    AutoCamperA camperA = new AutoCamperA();
+    ObservableList<VBox> camperList;
     List<Booking> bookingList = new ArrayList<>();
 
 
     public void initialize(){
-        ListView.setItems(camperA.getCampers());
+        camperList = FXCollections.observableArrayList();
+        camperList.add(new AutoCamperA(100,"1").getAutoCamperVbox());
+        camperList.add(new AutoCamperA(200,"2").getAutoCamperVbox());
+        camperList.add(new AutoCamperA(213,"3").getAutoCamperVbox());
+        camperList.add(new AutoCamperA(423,"4").getAutoCamperVbox());
+        ListView.setItems(camperList);
     }
 
     public void autoClicked(){
@@ -51,7 +58,8 @@ public class Controller {
 
         if (Integer.parseInt(bookingWeek.getText())>=0&&Integer.parseInt(bookingWeek.getText())<=52&&
                 Integer.parseInt(bookingWeek2.getText())>=0&&Integer.parseInt(bookingWeek2.getText())<=52) {
-            bookingList.add(new Booking(bookingWeek.getText() + "-" + bookingWeek2.getText(), 1));
+            bookingList.add(new Booking(bookingWeek.getText() + "-" + bookingWeek2.getText(), 1,
+                    1,"1"));
             pickedAuto.setText("done");
             try {
                 handleCreatePlaylistMenu();
