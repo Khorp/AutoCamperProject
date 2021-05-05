@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -47,14 +48,21 @@ public class Controller {
         pickedAuto.setText(labelText);
     }
 
-    public void createBooking(){
+    public void createBooking(ActionEvent event){
 
         if (Integer.parseInt(bookingWeek.getText())>=0&&Integer.parseInt(bookingWeek.getText())<=52&&
                 Integer.parseInt(bookingWeek2.getText())>=0&&Integer.parseInt(bookingWeek2.getText())<=52) {
             bookingList.add(new Booking(bookingWeek.getText() + "-" + bookingWeek2.getText(), 1));
             pickedAuto.setText("done");
             try {
-                handleCreatePlaylistMenu();
+
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("PaymentFXML.fxml"));
+                Parent root = loader.load();
+                Scene scene = new Scene(root);
+                Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+
             }catch (Exception e){}
         }
         else {
@@ -62,16 +70,6 @@ public class Controller {
         }
     }
 
-    public void handleCreatePlaylistMenu() throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("PaymentFXML.fxml"));
-
-        Scene scene = new Scene(root);
-        Stage stage = new Stage();
-
-        stage.setTitle("Playlist creator");
-        stage.setScene(scene);
-        stage.show();
     }
 
-}
