@@ -53,12 +53,12 @@
             </VBox>
             <VBox fx:id="Vbox1" prefHeight="359.0" prefWidth="126.0" style="-fx-background-color: rgb(110,110,110);">
                <children>
-                  <Label fx:id="priceLabel" text="priceLab" textFill="WHITE">
+                  <Label fx:id="priceLabel" text="Price:" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="TypeLabel" text="Type" textFill="WHITE">
+                  <Label fx:id="TypeLabel" text="Type:" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
