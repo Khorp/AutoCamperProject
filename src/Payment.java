@@ -2,6 +2,8 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -28,36 +30,58 @@ public class Payment {
 
 
 
-    public void handlePayCredit(ActionEvent actionEvent) {
+    public void handlePayCredit(ActionEvent event) {
         name = tName.getText();
         address = tAddress.getText();
         email = tEmail.getText();
         phoneno = tPhoneNo.getText();
+
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("PaymentConfirm.fxml"));
-            /*
-             * if "fx:controller" is not set in fxml
-             * fxmlLoader.setController(NewWindowController);
-             */
-            Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-            Stage stage = new Stage();
-            stage.setTitle("New Window");
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("PaymentConfirm.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.show();
-        } catch (IOException e) {
-            Logger logger = Logger.getLogger(getClass().getName());
-            logger.log(Level.SEVERE, "Failed to create new Window.", e);
-        }
+
+        }catch (Exception e)
+        {e.printStackTrace();}
     }
 
-
-    public void handlePayPaypal(ActionEvent actionEvent) {
+    public void handlePayPaypal(ActionEvent event) {
         name = tName.getText();
         address = tAddress.getText();
         email = tEmail.getText();
         phoneno = tPhoneNo.getText();
+
+        try {
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("PaymentPayPalConfirm.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+
+        }catch (Exception e)
+        {e.printStackTrace();}
     }
 
 
-}
+
+    public void returnToMainView(ActionEvent event) {
+        try {
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("stuff.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+
+        }catch (Exception e)
+        {e.printStackTrace();}
+    }
+    }
+
