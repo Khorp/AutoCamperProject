@@ -1,7 +1,7 @@
 public interface AutoCamper {
 
     type camperType = type.standard;
-    int reading = 0;
+    //int reading = 0;
 
     enum type{
         basic,
@@ -9,9 +9,14 @@ public interface AutoCamper {
         luxury
     }
 
-    public void setCamperType();
 
-    public type getCamperType();
+//    public void setCamperType();
+
+  //  public type getCamperType();
+
+    //public int getReading();
+
+    //public void setReading(int reading);
 
 
 

@@ -4,11 +4,24 @@ public class Booking {
 
     private String bookingWeeks;
     private int bookingID;
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getAutoCamperBooked() {
+        return autoCamperBooked;
+    }
+
+    private double price;
+    private String autoCamperBooked;
     private List<Customer> customersList;
 
-    public Booking(String bookingWeeks, int bookingID) {
+    public Booking(String bookingWeeks, int bookingID,double price,String autoCamperBooked) {
         this.bookingWeeks = bookingWeeks;
         this.bookingID = bookingID;
+        this.price = price;
+        this.autoCamperBooked = autoCamperBooked;
     }
 
     public String getBookingWeeks() {
