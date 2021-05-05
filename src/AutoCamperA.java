@@ -26,16 +26,24 @@ public class AutoCamperA implements AutoCamper{
     }
 
     public double getPrice(){
-        if (AutoCamperA.camperType.equals(type.basic)){
-            return price/0.8;
-        }else if (AutoCamperA.camperType.equals(type.standard)){
+        if (AutoCamperA.camperType.equals(AutoCamper.type.basic)){
             return price;
-        }else if (AutoCamperA.camperType.equals(type.luxury)){
+        }else if (AutoCamperA.camperType.equals(AutoCamper.type.standard)){
+            return price;
+        }else if (AutoCamperA.camperType.equals(AutoCamper.type.luxury)){
             return price*1.5;
         }
         else {
             return 0;
         }
+    }
+
+    public type getType(){
+        return type;
+    }
+
+    public String getAutoCamperName(){
+        return autoCamperName;
     }
 
     public VBox getAutoCamperVbox(){
