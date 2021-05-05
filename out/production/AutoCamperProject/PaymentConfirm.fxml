@@ -35,16 +35,16 @@
                         <Font name="System Italic" size="21.0" />
                      </font>
                   </Label>
-                  <Label layoutX="105.0" layoutY="127.0" prefHeight="21.0" prefWidth="125.0" text="Name:" />
-                  <Label layoutX="105.0" layoutY="161.0" prefHeight="21.0" prefWidth="125.0" text="Address:" />
-                  <Label layoutX="105.0" layoutY="191.0" prefHeight="21.0" prefWidth="125.0" text="Email:" />
+                  <Label layoutX="165.0" layoutY="127.0" prefHeight="21.0" prefWidth="125.0" text="Name:" />
+                  <Label layoutX="155.0" layoutY="161.0" prefHeight="21.0" prefWidth="125.0" text="Address:" />
+                  <Label layoutX="165.0" layoutY="191.0" prefHeight="21.0" prefWidth="125.0" text="Email:" />
                   <Label layoutX="105.0" layoutY="222.0" prefHeight="21.0" prefWidth="125.0" text="Phone Number:" />
                   <Label layoutX="105.0" layoutY="253.0" prefHeight="21.0" prefWidth="125.0" text="Weeks numbers:" />
-                  <Label fx:id="lName" layoutX="256.0" layoutY="127.0" prefHeight="21.0" prefWidth="125.0" />
-                  <Label layoutX="266.0" layoutY="161.0" prefHeight="21.0" prefWidth="125.0" />
-                  <Label layoutX="266.0" layoutY="191.0" prefHeight="21.0" prefWidth="125.0" />
-                  <Label layoutX="266.0" layoutY="222.0" prefHeight="21.0" prefWidth="125.0" />
-                  <Label layoutX="266.0" layoutY="253.0" prefHeight="21.0" prefWidth="125.0" />
+                  <Label fx:id="lName" layoutX="218.0" layoutY="127.0" prefHeight="21.0" prefWidth="125.0" />
+                  <Label fx:id="lAdress" layoutX="218.0" layoutY="161.0" prefHeight="21.0" prefWidth="125.0" />
+                  <Label fx:id="lEmail" layoutX="218.0" layoutY="191.0" prefHeight="21.0" prefWidth="125.0" />
+                  <Label fx:id="lPhoneNo" layoutX="218.0" layoutY="222.0" prefHeight="21.0" prefWidth="125.0" />
+                  <Label layoutX="218.0" layoutY="253.0" prefHeight="21.0" prefWidth="125.0" />
                   <Button layoutX="244.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleLoadFrontPage" prefHeight="31.0" prefWidth="92.0" text="Ok" />
                </children>
             </Pane>
