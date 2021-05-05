@@ -52,32 +52,52 @@ public class Controller {
         ListView.setItems(camperList);
     }
 
+    Label temp1;
+
     public void autoClicked(){
         //need to get text from label from a vbox witch is inside a listview
         VBox temp = ListView.getSelectionModel().getSelectedItem();
-        Label temp1 = (Label) temp.getChildren().get(0);
+        temp1 = (Label) temp.getChildren().get(0);
         temp1.getText();
         pickedAuto.setText(temp1.getText());
     }
+
+    /*
+        need an autoCamper pressed
+        no manuel info
+        easier to get booking info
+        fix if() so you cant say from 10 to 9
+     */
+
+    // sql bookingId thing
+    int autoNumber = 1; //temp
 
     public void createBooking(ActionEvent event){
 
         if (Integer.parseInt(bookingWeek.getText())>=0&&Integer.parseInt(bookingWeek.getText())<=52&&
                 Integer.parseInt(bookingWeek2.getText())>=0&&Integer.parseInt(bookingWeek2.getText())<=52) {
-            bookingList.add(new Booking(bookingWeek.getText() + "-" + bookingWeek2.getText(), 1,
-                    1,"1"));
-            pickedAuto.setText("done");
-            try {
+            if (temp1!=null) {
+                //need an while loop that checks through database for other bookingId's
+                bookingList.add(new Booking(bookingWeek.getText() + "-" + bookingWeek2.getText(), autoNumber,
+                        100, temp1.getText()));
+                autoNumber++;
+                pickedAuto.setText("done");
+                try {
 
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("PaymentFXML.fxml"));
-                Parent root = loader.load();
-                Scene scene = new Scene(root);
-                Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-                stage.setScene(scene);
-                stage.show();
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("PaymentFXML.fxml"));
+                    Parent root = loader.load();
+                    Scene scene = new Scene(root);
+                    Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    stage.setScene(scene);
+                    stage.show();
 
-            }catch (Exception e)
-            {e.printStackTrace();}
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+            else {
+                pickedAuto.setText("you haven't picked a autoCamper");
+            }
         }
         else {
             pickedAuto.setText("Invalid week number");
