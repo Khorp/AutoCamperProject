@@ -42,17 +42,22 @@ public class Controller {
 
     public void initialize(){
         camperList = FXCollections.observableArrayList();
-        camperList.add(new AutoCamperA(100,"1", AutoCamper.type.standard).getAutoCamperVbox());
-        camperList.add(new AutoCamperA(200,"2", AutoCamper.type.basic).getAutoCamperVbox());
-        camperList.add(new AutoCamperA(213,"3", AutoCamper.type.luxury).getAutoCamperVbox());
-        camperList.add(new AutoCamperA(423,"4", AutoCamper.type.standard).getAutoCamperVbox());
+        camperList.add(new AutoCamperA(100,"Adria autocamper", AutoCamper.type.standard).getAutoCamperVbox());
+        camperList.add(new AutoCamperA(200,"Arto Niesmann+Bischoff autocamper", AutoCamper.type.basic).getAutoCamperVbox());
+        camperList.add(new AutoCamperA(213,"Autocamper", AutoCamper.type.luxury).getAutoCamperVbox());
+        camperList.add(new AutoCamperA(423,"Britz autocamper", AutoCamper.type.standard).getAutoCamperVbox());
+        camperList.add(new AutoCamperA(423,"Concorde autocamper", AutoCamper.type.standard).getAutoCamperVbox());
+        camperList.add(new AutoCamperA(100,"GRAN CANARIA autocamper", AutoCamper.type.luxury).getAutoCamperVbox());
+        camperList.add(new AutoCamperA(10,"volkswagen samba autocamper", AutoCamper.type.basic).getAutoCamperVbox());
         ListView.setItems(camperList);
     }
 
     public void autoClicked(){
         //need to get text from label from a vbox witch is inside a listview
-        String labelText = ListView.getSelectionModel().getSelectedItem().getChildren().get(0).toString();
-        pickedAuto.setText(labelText);
+        VBox temp = ListView.getSelectionModel().getSelectedItem();
+        Label temp1 = (Label) temp.getChildren().get(0);
+        temp1.getText();
+        pickedAuto.setText(temp1.getText());
     }
 
     public void createBooking(ActionEvent event){
