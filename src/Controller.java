@@ -29,27 +29,38 @@ public class Controller {
     Button createBooking;
 
     @FXML
-    Label pickedAuto;
+    Label pickedAuto,priceLabel,TypeLabel;
 
     @FXML
     TextField bookingWeek,bookingWeek2;
 
     @FXML
+    VBox Vbox1;
+
+    @FXML
     ListView<VBox> ListView;
     ObservableList<VBox> camperList;
+    List<AutoCamperA> list;
     List<Booking> bookingList = new ArrayList<>();
 
 
     public void initialize(){
         camperList = FXCollections.observableArrayList();
-        camperList.add(new AutoCamperA(100,"Adria autocamper", AutoCamper.type.standard).getAutoCamperVbox());
-        camperList.add(new AutoCamperA(200,"Arto Niesmann+Bischoff autocamper", AutoCamper.type.basic).getAutoCamperVbox());
-        camperList.add(new AutoCamperA(213,"Autocamper", AutoCamper.type.luxury).getAutoCamperVbox());
-        camperList.add(new AutoCamperA(423,"Britz autocamper", AutoCamper.type.standard).getAutoCamperVbox());
-        camperList.add(new AutoCamperA(423,"Concorde autocamper", AutoCamper.type.standard).getAutoCamperVbox());
-        camperList.add(new AutoCamperA(100,"GRAN CANARIA autocamper", AutoCamper.type.luxury).getAutoCamperVbox());
-        camperList.add(new AutoCamperA(10,"volkswagen samba autocamper", AutoCamper.type.basic).getAutoCamperVbox());
+        list = new ArrayList<>();
+
+        list.add(new AutoCamperA(100,"Adria autocamper", AutoCamper.type.standard));
+        list.add(new AutoCamperA(200,"Arto Niesmann+Bischoff autocamper", AutoCamper.type.standard));
+        list.add(new AutoCamperA(213,"Autocamper", AutoCamper.type.standard));
+        list.add(new AutoCamperA(423,"Britz autocamper", AutoCamper.type.standard));
+        list.add(new AutoCamperA(423,"Concorde autocamper", AutoCamper.type.standard));
+        list.add(new AutoCamperA(100,"GRAN CANARIA autocamper", AutoCamper.type.standard));
+        list.add(new AutoCamperA(10,"volkswagen samba autocamper", AutoCamper.type.standard));
+        for (AutoCamperA autoCamperA : list) {
+            camperList.add(autoCamperA.getAutoCamperVbox());
+        }
         ListView.setItems(camperList);
+
+        Vbox1 = new VBox();
     }
 
     Label temp1;
@@ -60,6 +71,9 @@ public class Controller {
         temp1 = (Label) temp.getChildren().get(0);
         temp1.getText();
         pickedAuto.setText(temp1.getText());
+
+        priceLabel.setText("Price: ");
+        TypeLabel.setText("Type: ");
     }
 
     /*
