@@ -8,11 +8,22 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
+/**
+ * ConfirmedPayment class
+ * @since 04/05/2021
+ */
 public class PaymentConfirm {
 
     @FXML
     Label lName, lAdress,lEmail, lPhoneNo;
 
+    /***
+     * Constructor
+     * @param name customerName
+     * @param address customerAddress
+     * @param email customerAddress
+     * @param PhonoNo customerPhoneNo
+     */
     public void setName(String name, String address, String email, String PhonoNo) {
         this.name = name;
         lName.setText(name);
@@ -25,18 +36,17 @@ public class PaymentConfirm {
 
     String name;
 
+    /**
+     * starts when its fxml is started
+     */
     public void initialize() {
-
-
-
-
         System.out.println("test" + name);
-
-
-
     }
 
-
+    /**
+     * button that sends you back to front page
+     * @param event
+     */
     public void handleLoadFrontPage(ActionEvent event) {
 
         try {
@@ -51,8 +61,6 @@ public class PaymentConfirm {
         }catch (Exception e)
         {e.printStackTrace();}
     }
-
-    }
-
+}
 
 

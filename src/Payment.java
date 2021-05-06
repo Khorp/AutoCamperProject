@@ -19,6 +19,10 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * PaymentController Class
+ * @since 03/05/2021
+ */
 public class Payment {
 
     public String name, address, email, phoneno;
@@ -33,7 +37,11 @@ public class Payment {
     ChoiceBox cInsurance;
 
 
-
+    /**
+     * CreditCardButton gets info from TextField and
+     * opens paymentConfirm.fxml
+     * @param event
+     */
     public void handlePayCredit(ActionEvent event) {
         name = tName.getText();
         System.out.println(name);
@@ -56,6 +64,10 @@ public class Payment {
         {e.printStackTrace();}
     }
 
+    /**
+     * Same as creditCardButton but instead paypal
+     * @param event
+     */
     public void handlePayPaypal(ActionEvent event) {
         name = tName.getText();
         address = tAddress.getText();
@@ -78,7 +90,10 @@ public class Payment {
     }
 
 
-
+    /**
+     * return button so you can get back to book another autocamper
+     * @param event
+     */
     public void returnToMainView(ActionEvent event) {
         try {
 
