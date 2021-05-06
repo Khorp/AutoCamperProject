@@ -23,6 +23,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @Since 03/05/2021
+ */
 public class Controller {
 
     @FXML
@@ -43,7 +46,9 @@ public class Controller {
     List<AutoCamperA> list;
     List<Booking> bookingList = new ArrayList<>();
 
-
+    /***
+     * Creates list and observable list and inputs start data into them
+     */
     public void initialize(){
         camperList = FXCollections.observableArrayList();
         list = new ArrayList<>();
@@ -65,6 +70,10 @@ public class Controller {
 
     Label temp1;
 
+    /***
+     * Listview clicked gets name of autoCamper in picture and writes it into
+     * label
+     */
     public void autoClicked(){
         //need to get text from label from a vbox witch is inside a listview
         VBox temp = ListView.getSelectionModel().getSelectedItem();
@@ -92,6 +101,11 @@ public class Controller {
     // sql bookingId thing
     int autoNumber = 1; //temp
 
+    /**
+     * button method for creating booking takes booking weeks and autoCamper and sends you
+     * to another site for payment
+     * @param event action
+     */
     public void createBooking(ActionEvent event){
 
         if (Integer.parseInt(bookingWeek.getText())>=0&&Integer.parseInt(bookingWeek.getText())<=52&&
@@ -123,7 +137,4 @@ public class Controller {
             pickedAuto.setText("Invalid week number");
         }
     }
-
-
-    }
-
+}
