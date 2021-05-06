@@ -1,23 +1,17 @@
+/**
+ * InterFace for AutoCamper
+ */
 public interface AutoCamper {
 
     type camperType = type.standard;
-    //int reading = 0;
 
+    /***
+     * Enum for type of AutoCamper
+     */
     enum type{
         basic,
         standard,
         luxury
     }
-
-
-//    public void setCamperType();
-
-  //  public type getCamperType();
-
-    //public int getReading();
-
-    //public void setReading(int reading);
-
-
 
 }

@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
@@ -14,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <left>
       <Pane prefHeight="139.0" prefWidth="64.0" style="-fx-background-color: rgb(100,100,100);" BorderPane.alignment="CENTER" />
    </left>
@@ -49,11 +45,11 @@
       <Pane prefHeight="662.0" prefWidth="13.0" style="-fx-background-color: rgb(100,100,100);" BorderPane.alignment="CENTER" />
    </right>
    <center>
-      <SplitPane dividerPositions="0.7260371959942774" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <SplitPane dividerPositions="0.6408045977011493" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <items>
             <VBox prefHeight="409.0" prefWidth="335.0" style="-fx-background-color: rgb(120,120,120);">
                <children>
-                  <ListView fx:id="ListView" onMouseClicked="#autoClicked" prefHeight="660.0" prefWidth="458.0" style="-fx-background-color: rgb(140,140,140);" />
+                  <ListView fx:id="ListView" onMouseClicked="#autoClicked" prefHeight="359.0" prefWidth="295.0" style="-fx-background-color: rgb(140,140,140);" />
                </children>
             </VBox>
             <VBox fx:id="Vbox1" prefHeight="660.0" prefWidth="201.0" style="-fx-background-color: rgb(110,110,110);">
