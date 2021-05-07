@@ -6,7 +6,7 @@ import java.sql.Statement;
 public class DatabaseThing {
 
 
-    public static void makeCustomer() throws ClassNotFoundException {
+    public void makeCustomer(String address,String licensePlate,String name,String phoneNo,int insuranceID,String email) throws ClassNotFoundException {
 
         try {
             // (1) load the driver into memory
@@ -20,7 +20,7 @@ public class DatabaseThing {
             // (3) create the statement
             Statement stmt = con.createStatement();
 
-            int rows = stmt.executeUpdate("INSERT INTO customer VALUES ('test adresse','BC69495','Nicolaj Hansen','28894929',1,'nicolajhansen97@live.dk')");
+            int rows = stmt.executeUpdate("INSERT INTO customer VALUES ('"+address+"','"+licensePlate+"','"+name+"','"+phoneNo+"',"+insuranceID+",'"+email+"')");
             //int rows = stmt.executeUpdate("INSERT INTO autoCamper VALUES ('Luxury','AA11111')");
 
             System.out.println("Records are putted into database");

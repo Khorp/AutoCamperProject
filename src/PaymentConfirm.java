@@ -31,7 +31,6 @@ public class PaymentConfirm {
         lEmail.setText(email);
         lPhoneNo.setText(PhonoNo);
 
-
     }
 
     String name;

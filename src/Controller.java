@@ -81,7 +81,6 @@ public class Controller {
         temp1.getText();
         pickedAuto.setText(temp1.getText());
 
-
         //loop to find get number
         for (int i=0;i<camperList.size();i++){
             if (list.get(i).getAutoCamperName().equals(temp1.getText())){

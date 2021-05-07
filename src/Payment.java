@@ -49,7 +49,10 @@ public class Payment {
         email = tEmail.getText();
         phoneno = tPhoneNo.getText();
 
-
+        DatabaseThing db = DatabaseAdapterSingelton.getInstance();
+        try {
+            db.makeCustomer(address,"",name,phoneno,1,email);
+        }catch (Exception e){}
 
         try {
 
