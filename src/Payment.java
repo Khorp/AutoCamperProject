@@ -51,8 +51,10 @@ public class Payment {
 
         DatabaseThing db = DatabaseAdapterSingelton.getInstance();
         try {
-            db.makeCustomer(address,"",name,phoneno,1,email);
-        }catch (Exception e){}
+            db.makeCustomer(address,"test",name,phoneno,1,email);
+        }catch (Exception e){
+            System.out.println("Error");
+        }
 
         try {
 

@@ -15,7 +15,7 @@ public class DatabaseThing {
 
             // (2) establish Connection
             Connection con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=autocamperRental", "sa", "datamatiker");
-            System.out.println("Connection successfully");
+            System.out.println("Connection successful");
 
             // (3) create the statement
             Statement stmt = con.createStatement();
