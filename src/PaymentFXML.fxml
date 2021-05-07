@@ -48,9 +48,9 @@
                   <ChoiceBox layoutX="193.0" layoutY="251.0" prefHeight="31.0" prefWidth="192.0">
                         <items>
                             <FXCollections fx:factory="observableArrayList">
-                                <String fx:value="2 minutes" />
-                                <String fx:value="5 minutes" />
-                                <String fx:value="15 minutes" />
+                                <String fx:value="Collision Damage Waiver" />
+                                <String fx:value="Theft protection Insurance" />
+                                <String fx:value="All-included" />
                             </FXCollections>
                         </items>
                   </ChoiceBox>
